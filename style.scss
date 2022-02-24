@@ -1,0 +1,112 @@
+//colors option
+$Moderate-violet: hsl(263, 55%, 52%);
+$Very-dark-grayish-blue: hsl(217, 19%, 35%);
+$Very-dark-blackish-blue: hsl(219, 29%, 14%);
+$White: hsl(0, 0%, 100%);
+$Light-gray: hsl(0, 0%, 81%);
+$Light-grayish-blue: hsl(210, 46%, 95%);
+
+// fonts style
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500&display=swap');
+*{
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+}
+
+body{
+    font-family: 'Barlow Semi Condensed';
+    background:darkgrey;
+}
+
+.grid-container{
+    display:grid;
+}
+
+@media (min-width:50em){
+.grid-container{
+    padding:10px 20px;
+    grid-template-columns: repeat(4,fr);
+    grid-row:1 / span 2;
+}
+
+.card:last-child{
+    grid-column-start: 4;
+    grid-row:1/span 2;
+}
+
+.grid-col-span-2{
+grid-column: span 2;
+}
+
+}
+.profile{
+    display:flex;
+    align-items: center;
+    margin:10px;
+    padding:0 15px;
+    img{
+        width:50px;
+        height:50px;
+        border-radius: 50%;
+    }
+
+   div{
+        display: flex;
+        flex-direction: column;
+        margin-left:10px;
+    }
+}
+
+.card{
+padding:20px;
+margin:10px;
+border-radius: 10px;
+p{
+    &:nth-child(1){
+        font-weight: 800;
+        font-size: 20px;
+    }
+}
+    &:nth-child(1){
+        background:$Moderate-violet;
+        color:$White;
+        z-index:1;
+        position: relative;
+
+        .quotes{
+            position: absolute;
+            right:0;
+            z-index:-1;
+            overflow: hidden;
+        }
+    }
+    &:nth-child(2){
+        background:$Very-dark-grayish-blue;
+        color:$White;
+    }
+    &:nth-child(3){
+        background:$White;
+        color:$Very-dark-grayish-blue;
+    }
+    &:nth-child(4){
+        background:$Very-dark-blackish-blue;
+        color:$White;
+    }
+    &:last-child{
+        background:$White;
+        color:$Very-dark-grayish-blue;
+    }
+}
+
+.past-experience{
+    padding:20px 30px;
+    opacity:50%;
+}
+.testimonial{
+    padding:0 30px;
+}
+
+small{
+    opacity:50%;
+}

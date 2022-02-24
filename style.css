@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Barlow Semi Condensed';
+  background: darkgrey;
+}
+
+.grid-container {
+  display: -ms-grid;
+  display: grid;
+}
+
+@media (min-width: 50em) {
+  .grid-container {
+    padding: 10px 20px;
+    -ms-grid-columns: (fr)[4];
+        grid-template-columns: repeat(4, fr);
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    grid-row: 1 / span 2;
+  }
+  .card:last-child {
+    -ms-grid-column: 4;
+        grid-column-start: 4;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    grid-row: 1/span 2;
+  }
+  .grid-col-span-2 {
+    grid-column: span 2;
+  }
+}
+
+.profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10px;
+  padding: 0 15px;
+}
+
+.profile img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.profile div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 10px;
+}
+
+.card {
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.card p:nth-child(1) {
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.card:nth-child(1) {
+  background: #7541c8;
+  color: white;
+  z-index: 1;
+  position: relative;
+}
+
+.card:nth-child(1) .quotes {
+  position: absolute;
+  right: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.card:nth-child(2) {
+  background: #48556a;
+  color: white;
+}
+
+.card:nth-child(3) {
+  background: white;
+  color: #48556a;
+}
+
+.card:nth-child(4) {
+  background: #19212e;
+  color: white;
+}
+
+.card:last-child {
+  background: white;
+  color: #48556a;
+}
+
+.past-experience {
+  padding: 20px 30px;
+  opacity: 50%;
+}
+
+.testimonial {
+  padding: 0 30px;
+}
+
+small {
+  opacity: 50%;
+}
+/*# sourceMappingURL=style.css.map */
